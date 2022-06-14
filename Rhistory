@@ -1,0 +1,512 @@
+Nbrep=1000
+simtraj=function(ALPHAA,re,sigma,r0,time,dt,nbrep)
+{
+temps=seq(0,time,by=dt)
+r=matrix(rep(0,(length(temps))*nbrep),ncol=nbrep)
+for(j in 1:nbrep)
+{
+i=1
+r[i,j]=r0
+while((temps[i]<time))
+{
+i<-i+1
+a1=rnorm(1,0,1)
+r[i,j]=r[i-1,j]+ALPHAA*(re-r[i-1,j])*dt+sqrt(sigma)*sqrt(dt)*a1
+}
+}
+rmean=rep(0,1)
+for(i in 1:length(temps))
+{
+rmean[i]=mean(r[i,])
+}
+l=list()
+l[[1]]=rmean
+plot(temps,rmean,col="red",type="l",main="trajectoire MOYENNE SIMULEE SUR 4 MOIS",ylab="",xlab="")
+return(l)
+}
+ALPHAA=0.2475
+re=0.0325
+sigma=0.0064
+r0=0.03244
+time=1/3
+dt=1/252
+nbrep=1000
+#4  LA TRAJECTOIRE SIMULEE SUR 6 MOIS
+simtraj=function(BETA,RE,GAMMA,R0,time,dt,Nbrep)
+{
+temps=seq(0,time,by=dt)
+rend=matrix(rep(0,(length(temps))*Nbrep),ncol=Nbrep)
+for(j in 1:Nbrep)
+{
+i=1
+rend[i,j]=R0
+while((temps[i]<time))
+{
+i<-i+1
+a1=rnorm(1,0,1)
+rend[i,j]=r[i-1,j]+BETA*(re-r[i-1,j])*dt+sqrt(GAMMA)*sqrt(dt)*a1
+}
+}
+rmean=rep(0,1)
+for(i in 1:length(temps))
+{
+rmean[i]=mean(r[i,])
+}
+l=list()
+l[[1]]=rmean
+plot(temps,rmean,col="yellow",type="l",main="trajectoire MOYENNE SIMULEE SUR 6 MOIS",ylab="",xlab="")
+return(l)
+}
+BETA=0.2475
+RE=0.0325
+GAMMA=0.0064
+R0=0.03244
+time=1
+dt=1/252
+Nbrep=1000
+simtraj=function(BETA,RE,GAMMA,R0,time,dt,Nbrep)
+{
+temps=seq(0,time,by=dt)
+rend=matrix(rep(0,(length(temps))*Nbrep),ncol=Nbrep)
+for(j in 1:Nbrep)
+{
+i=1
+rend[i,j]=R0
+while((temps[i]<time))
+{
+i<-i+1
+a1=rnorm(1,0,1)
+rend[i,j]=r[i-1,j]+BETA*(re-r[i-1,j])*dt+sqrt(GAMMA)*sqrt(dt)*a1
+}
+}
+rmean=rep(0,1)
+for(i in 1:length(temps))
+{
+rmean[i]=mean(r[i,])
+}
+l=list()
+l[[1]]=rmean
+plot(temps,rmean,col="darkmagenta",type="l",main="trajectoire MOYENNE SIMULEE SUR 6 MOIS",ylab="",xlab="")
+return(l)
+}
+BETA=0.2475
+RE=0.0325
+GAMMA=0.0064
+R0=0.03244
+time=1
+dt=1/252
+Nbrep=1000
+simtraj=function(ALPHAA,re,sigma,r0,time,dt,nbrep)
+{
+temps=seq(0,time,by=dt)
+r=matrix(rep(0,(length(temps))*nbrep),ncol=nbrep)
+for(j in 1:nbrep)
+{
+i=1
+r[i,j]=r0
+while((temps[i]<time))
+{
+i<-i+1
+a1=rnorm(1,0,1)
+r[i,j]=r[i-1,j]+ALPHAA*(re-r[i-1,j])*dt+sqrt(sigma)*sqrt(dt)*a1
+}
+}
+rmean=rep(0,1)
+for(i in 1:length(temps))
+{
+rmean[i]=mean(r[i,])
+}
+l=list()
+l[[1]]=rmean
+plot(temps,rmean,col="red",type="l",main="trajectoire MOYENNE SIMULEE SUR 4 MOIS",ylab="",xlab="")
+return(l)
+}
+ALPHAA=0.2475
+re=0.0325
+sigma=0.0064
+r0=0.03244
+time=2
+dt=1/252
+nbrep=1000
+simtraj=function(ALPHAA,re,sigma,r0,time,dt,nbrep)
+{
+temps=seq(0,time,by=dt)
+r=matrix(rep(0,(length(temps))*nbrep),ncol=nbrep)
+for(j in 1:nbrep)
+{
+i=1
+r[i,j]=r0
+while((temps[i]<time))
+{
+i<-i+1
+a1=rnorm(1,0,1)
+r[i,j]=r[i-1,j]+ALPHAA*(re-r[i-1,j])*dt+sqrt(sigma)*sqrt(dt)*a1
+}
+}
+rmean=rep(0,1)
+for(i in 1:length(temps))
+{
+rmean[i]=mean(r[i,])
+}
+l=list()
+l[[1]]=rmean
+plot(temps,rmean,col="red",type="l",main="trajectoire MOYENNE SIMULEE SUR 4 MOIS",ylab="",xlab="")
+return(l)
+}
+ALPHAA=0.2475
+re=0.0325
+sigma=0.0064
+r0=0.03244
+time=1/3
+dt=1/252
+nbrep=1000
+simtraj=function(BETA,RE,GAMMA,R0,time,dt,Nbrep)
+{
+temps=seq(0,time,by=dt)
+rend=matrix(rep(0,(length(temps))*Nbrep),ncol=Nbrep)
+for(j in 1:Nbrep)
+{
+i=1
+rend[i,j]=R0
+while((temps[i]<time))
+{
+i<-i+1
+a1=rnorm(1,0,1)
+rend[i,j]=r[i-1,j]+BETA*(re-r[i-1,j])*dt+sqrt(GAMMA)*sqrt(dt)*a1
+}
+}
+rmean=rep(0,1)
+for(i in 1:length(temps))
+{
+rmean[i]=mean(r[i,])
+}
+l=list()
+l[[1]]=rmean
+plot(temps,rmean,col="yellow",type="l",main="trajectoire MOYENNE SIMULEE SUR 6 MOIS",ylab="",xlab="")
+return(l)
+}
+BETA=0.2475
+RE=0.0325
+GAMMA=0.0064
+R0=0.03244
+time=1/3
+dt=1/252
+Nbrep=1000
+library(readr)
+ARKK4 <- read_csv("ARKK4.csv")
+View(ARKK4)
+library(readr)
+ARKK6 <- read_csv("ARKK6.csv")
+View(ARKK6)
+simtraj=function(ALPHAA,rE,sigmaa,rO,time,dt,NBREP)
+{
+temps=seq(0,time,by=dt)
+r=matrix(rep(0,(length(temps))*NBREP),ncol=nbrep)
+for(j in 1:nbrep)
+{
+i=1
+R[i,j]=rO
+while((temps[i]<time))
+{
+i<-i+1
+a1=rnorm(1,0,1)
+R[i,j]=R[i-1,j]+ALPHAA*(rE-R[i-1,j])*dt+sqrt(sigmaa)*sqrt(dt)*a1
+}
+}
+rmean=rep(0,1)
+for(i in 1:length(temps))
+{
+rmean[i]=mean(r[i,])
+}
+Q=list()
+Q[[1]]=rmean
+plot(temps,rmean,col="green",type="l",main="trajectoire MOYENNE SIMULEE SUR 4 MOIS",ylab="",xlab="")
+return(Q)
+}
+ALPHAA=0.2475
+rE=0.0325
+sigmaa=0.0064
+rO=0.03244
+time=1/3
+dt=1/252
+NBREP=1000
+rm(liste=ls())
+setwd("C:/Users/Sadoudi/Documents/projet R")
+VCYT<-read.csv("VCYT.csv")
+d1<-VCYT$Close
+summary(d1)
+plot(d1,type="l",main="VCYT",xlab="VCYT",col="darkmagenta")
+r=numeric(length(d1)-1)
+for(i in 2:length(d1))
+{
+r[i]=log(d1[i])-log(d1[i-1])
+}
+r
+r=r[2:4]
+rbarh<-mean(r)*252
+sig2=var(r)*252
+sig<-sqrt(sig2)
+mu<-rbarh+0.5*(sig2)
+sig
+SMBG=function(n,t,s0,mu,sigma)
+{
+y=rnorm(n,0,1)
+deltat=t/n
+s=numeric(n)
+s[1]=s0
+for(i in 2:(n))
+{
+s[i]=s[i-1]*exp(mu*deltat+sig*sqrt(deltat)*y[i-1])
+}
+return(s)
+}
+n=252
+t=1
+s0=d1[1]
+d2<-SMBG(n,t,s0,mu,sig)
+par(new=TRUE)
+plot(d2,type="l",xlab="time",ylab="",col="red")
+simtraj=function(alpha,re,sigma,r0,time,dt,nbrep)
+{
+temps=seq(0,time,by=dt)
+r=matrix(rep(0,(length(temps))*nbrep),ncol=nbrep)
+for(j in 1:nbrep)
+{
+i=1
+r[i,j]=r0
+while((temps[i]<time))
+{
+i<-i+1
+a1=rnorm(1,0,1)
+r[i,j]=r[i-1,j]+alpha*(re-r[i-1,j])*dt+sqrt(sigma)*sqrt(dt)*a1
+}
+}
+rmean=rep(0,1)
+for(i in 1:length(temps))
+{
+rmean[i]=mean(r[i,])
+}
+l=list()
+l[[1]]=rmean
+plot(temps,rmean,col="green",type="l",main="trajectoire",ylab="",xlab="")
+return(l)
+}
+alpha=0.2475
+re=0.0325
+sigma=0.0064
+r0=0.03244
+time=2
+dt=1/252
+nbrep=1000
+exp=simtraj(alpha,re,sigma,r0,time,dt,nbrep)
+rm(liste=ls())
+setwd("C:/Users/Sadoudi/Documents/projet R")
+VCYT<-read.csv("ARKK.csv")
+D1<-ARKK$Close
+summary(D1)
+plot(d1,type="l",main="ARKK",xlab="ARKK",col="blue")
+R=numeric(length(D1)-1)
+for(i in 2:length(D1))
+{
+R[i]=log(D1[i])-log(D1[i-1])
+}
+R
+R=R[2:4]
+Rbarh<-mean(R)*252
+sigm2=var(R)*252
+Sig<-sqrt(sigm2)
+mu<-Rbarh+0.5*(sigm2)
+Sig
+SMBG=function(n,t,S0,mu,Sigma)
+{
+y=rnorm(n,0,1)
+deltat=t/n
+S=numeric(n)
+S[1]=S0
+for(i in 2:(n))
+{
+S[i]=S[i-1]*exp(mu*deltat+Sig*sqrt(deltat)*y[i-1])
+}
+return(S)
+}
+n=252
+t=1
+S0=D1[1]
+D2<-SMBG(n,t,S0,mu,Sig)
+par(new=TRUE)
+plot(D2,type="l",xlab="time",ylab="",col="red")
+rm(liste=ls())
+setwd("C:/Users/Sadoudi/Documents/projet R")
+VCYT<-read.csv("VCYT.csv")
+d1<-VCYT$Close
+summary(d1)
+plot(d1,type="l",main="VCYT",xlab="VCYT",col="darkmagenta")
+r=numeric(length(d1)-1)
+for(i in 2:length(d1))
+{
+r[i]=log(d1[i])-log(d1[i-1])
+}
+r
+r=r[2:4]
+rbarh<-mean(r)*252
+sig2=var(r)*252
+sig<-sqrt(sig2)
+mu<-rbarh+0.5*(sig2)
+sig
+SMBG=function(n,t,s0,mu,sigma)
+{
+y=rnorm(n,0,1)
+deltat=t/n
+s=numeric(n)
+s[1]=s0
+for(i in 2:(n))
+{
+s[i]=s[i-1]*exp(mu*deltat+sig*sqrt(deltat)*y[i-1])
+}
+return(s)
+}
+n=252
+t=1
+s0=d1[1]
+d2<-SMBG(n,t,s0,mu,sig)
+par(new=TRUE)
+plot(d2,type="l",xlab="time",ylab="",col="red")
+###### 2) SIMULATION D'UNE TRAJECTOIRE MOYENNE(1000 trajectoires)#######
+simtraj=function(alpha,re,sigma,r0,time,dt,nbrep)
+{
+temps=seq(0,time,by=dt)
+r=matrix(rep(0,(length(temps))*nbrep),ncol=nbrep)
+for(j in 1:nbrep)
+{
+i=1
+r[i,j]=r0
+while((temps[i]<time))
+{
+i<-i+1
+a1=rnorm(1,0,1)
+r[i,j]=r[i-1,j]+alpha*(re-r[i-1,j])*dt+sqrt(sigma)*sqrt(dt)*a1
+}
+}
+rmean=rep(0,1)
+for(i in 1:length(temps))
+{
+rmean[i]=mean(r[i,])
+}
+l=list()
+l[[1]]=rmean
+plot(temps,rmean,col="green",type="l",main="trajectoire",ylab="",xlab="")
+return(l)
+}
+alpha=0.2475
+re=0.0325
+sigma=0.0064
+r0=0.03244
+time=2
+dt=1/252
+nbrep=1000
+exp=simtraj(alpha,re,sigma,r0,time,dt,nbrep)
+# 3) PREVISION FUTURE POUR LES DONNEE JOURNALIERES DE CLOTURE
+###########################TP N°3 BONUS############################
+#################SIMULATION DE L'ETF ARK INNOVATION
+rm(liste=ls())
+setwd("C:/Users/Sadoudi/Documents/projet R")
+VCYT<-read.csv("ARKK.csv")
+D1<-ARKK$Close
+summary(D1)
+plot(d1,type="l",main="ARKK",xlab="ARKK",col="blue")
+R=numeric(length(D1)-1)
+for(i in 2:length(D1))
+{
+R[i]=log(D1[i])-log(D1[i-1])
+}
+R
+R=R[2:4]
+Rbarh<-mean(R)*252
+sigm2=var(R)*252
+Sig<-sqrt(sigm2)
+mu<-Rbarh+0.5*(sigm2)
+Sig
+SMBG=function(n,t,S0,mu,Sigma)
+{
+y=rnorm(n,0,1)
+deltat=t/n
+S=numeric(n)
+S[1]=S0
+for(i in 2:(n))
+{
+S[i]=S[i-1]*exp(mu*deltat+Sig*sqrt(deltat)*y[i-1])
+}
+return(S)
+}
+n=252
+t=1
+S0=D1[1]
+D2<-SMBG(n,t,S0,mu,Sig)
+par(new=TRUE)
+plot(D2,type="l",xlab="time",ylab="",col="red")
+#2 SIMLATION DE LA TRAJECTOIRE
+simtraj=function(ALPHAA,rE,sigmaa,rO,time,dt,NBREP)
+{
+temps=seq(0,time,by=dt)
+r=matrix(rep(0,(length(temps))*NBREP),ncol=nbrep)
+for(j in 1:nbrep)
+{
+i=1
+R[i,j]=rO
+while((temps[i]<time))
+{
+i<-i+1
+a1=rnorm(1,0,1)
+R[i,j]=R[i-1,j]+ALPHAA*(rE-R[i-1,j])*dt+sqrt(sigmaa)*sqrt(dt)*a1
+}
+}
+rmean=rep(0,1)
+for(i in 1:length(temps))
+{
+rmean[i]=mean(r[i,])
+}
+Q=list()
+Q[[1]]=rmean
+plot(temps,rmean,col="green",type="l",main="trajectoire MOYENNE SIMULEE SUR 4 MOIS",ylab="",xlab="")
+return(Q)
+}
+ALPHAA=0.2475
+rE=0.0325
+sigmaa=0.0064
+rO=0.03244
+time=1/3
+dt=1/252
+NBREP=1000
+#4  LA TRAJECTOIRE SIMULEE SUR 6 MOIS
+simtraj=function(BETA,RE,GAMMA,R0,time,dt,Nbrep)
+{
+temps=seq(0,time,by=dt)
+rend=matrix(rep(0,(length(temps))*Nbrep),ncol=Nbrep)
+for(j in 1:Nbrep)
+{
+i=1
+rend[i,j]=R0
+while((temps[i]<time))
+{
+i<-i+1
+a1=rnorm(1,0,1)
+rend[i,j]=r[i-1,j]+BETA*(re-r[i-1,j])*dt+sqrt(GAMMA)*sqrt(dt)*a1
+}
+}
+rmean=rep(0,1)
+for(i in 1:length(temps))
+{
+rmean[i]=mean(r[i,])
+}
+l=list()
+l[[1]]=rmean
+plot(temps,rmean,col="yellow",type="l",main="trajectoire MOYENNE SIMULEE SUR 6 MOIS",ylab="",xlab="")
+return(l)
+}
+BETA=0.2475
+RE=0.0325
+GAMMA=0.0064
+R0=0.03244
+time=1/3
+dt=1/252
+Nbrep=1000
